@@ -1,0 +1,54 @@
+{
+  "name": "egg-extend-ua",
+  "version": "1.0.3",
+  "description": "egg UA 扩展",
+  "main": "",
+  "types": "",
+  "eggPlugin": {
+    "name": "ua",
+    "dependencies": [],
+    "optionalDependencies": [],
+    "env": [
+      "local",
+      "test",
+      "unittest",
+      "prod"
+    ]
+  },
+  "scripts": {
+    "test": "clear && egg-bin test",
+    "build": "clear && rm -rf ./app ./lib && tsc",
+    "release": "clear && npm run build && git checkout master && git merge dev && git push origin master && nrm use npm && npm publish && git checkout dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyyou/egg-extend-ua.git"
+  },
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "eggPlugin",
+    "egg-extend",
+    "eggextend",
+    "useragent",
+    "user-agent",
+    "ua",
+    "ismobile",
+    "isandroid",
+    "isios",
+    "isphone"
+  ],
+  "author": "zyy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zyyou/egg-extend-ua/issues"
+  },
+  "homepage": "https://github.com/zyyou/egg-extend-ua#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "egg": "^2.26.0",
+    "egg-bin": "^4.11.0",
+    "egg-mock": "^3.25.1"
+  }
+}
